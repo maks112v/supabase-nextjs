@@ -1,0 +1,22 @@
+{
+  "name": "supabase-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "pnpm run build",
+    "prepublishOnly": "pnpm test && pnpm run prettier && pnpm run lint"
+  },
+  "keywords": [],
+  "author": "maks",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  }
+}
